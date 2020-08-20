@@ -1,69 +1,156 @@
-// How Edabit Works challenge
-function hello() {
-    return "hello edabit.com";
-}
-
-// Return the Sum of Two Numbers challenge
+// Return the Sum of Two Numbers challenge:
 function addition(a, b) {
     return a + b;
 }
 
-//  Convert Minutes into Seconds challenge
+//  Convert Minutes into Seconds challenge:
 function convert(minutes) {
     return minutes * 60;
 }
 
-//  Return the Next Number from the Integer Passed challenge
+//  Return the Next Number from the Integer Passed challenge:
 function addition2(num) {
     return num + 1;
 }
 
-//  Area of a Triangle challenge
+//  Area of a Triangle challenge:
 function triArea(base, height) {
     return base * height / 2;
 }
 
-//  Return Something to Me! challenge
+//  Return Something to Me! challenge:
 function giveMeSomething(a) {
     return "something " + a;
 }
 
-//  Convert Hours into Seconds challenge
+//  Convert Hours into Seconds challenge:
 function howManySeconds(hours) {
     return hours * 60 * 60;
 }
-//  Return the First Element in an Array challenge
+//  Return the First Element in an Array challenge:
 function getFirstValue(arr) {
     return arr[0];
 }
 
-//  Maximum Edge of a Triangle challenge
+//  Maximum Edge of a Triangle challenge:
 function nextEdge(side1, side2) {
     return (side1 + side2) - 1;
 }
 
-//  Find the Perimeter of a Rectangle challenge
+//  Find the Perimeter of a Rectangle challenge:
 function findPerimeter(length, width) {
     return (length * 2) + (width * 2)
 }
 
-//  Return the Reminder from Two Numbers challenge
+//  Return the Reminder from Two Numbers challenge:
 function remainder(x, y) {
     return x % y;
 }
 
-//  Football Points challenge
+//  Football Points challenge:
 function footballPoints(wins, draws, losses) {
     losses = 0
     return wins * 3 + draws + losses;
 }
 
-//  the Farm Problem challenge
+//  the Farm Problem challenge:
 function animals(chickens, cows, pigs) {
     return chickens * 2 + cows * 4 + pigs * 4;
 }
 
-// Convert string to Number challenge
+// Convert string to Number challenge:
 function stringInt(str) {
     return Number(str);
 }
+
+// Movie Theater Admittance challenge:
+function acceptIntoMovie(age, isSupervised) {
+    return (age >= 15) || isSupervised;
+}
+
+// Flip the Boolean challenge:
+function flipBool(b) {
+    b = !b
+    return Number(b);
+}
+
+// Using Ternary Operators:
+function yeah_nope(bool) {
+    return bool === true ? 'yeah' : `nope`;
+}
+
+// Find the Index challenge:
+function findIndex(arr, str) {
+    return arr.indexOf(str);
+}
+
+// To the Power of ____ challenge: Create a function that takes a
+// base number and an exponent number and returns the calculation.
+function calculateExponent(num, exp) {
+    return Math.pow(num, exp);
+}
+
+// Find the Index (Part 2) challenge: Create a function that searches
+// for the index of a given item in an array. If the item is present,
+// it should return the index, otherwise, it should return -1.
+function search(arr, item) {
+    if (arr.includes(item)) {
+        return arr.indexOf(item)
+    } else return -1
+}
+
+function check(arr, el) {
+    return arr.includes(el);
+}
+
+function concatinate(arr1, arr2 {
+    return  arr1.concat(arr2);
+}
+
+function hasSpaces(str) {
+    return str.includes(" ");
+}
+
+// Word without First Character challenge: Create a function that takes
+// a word and returns the new word without including the first character.
+function newWord(str) {
+    return str.substring(1);
+}
+
+// Volume of a Box challenge: Create a function that takes an object argument
+// sizes (contains width, length, height keys) and returns the volume of the box.
+function volumeOfBox(sizes) {
+    return Multiplication(sizes);
+}
+
+// Convert an Array to a String challenge: Create a function that takes an
+// array of numbers or letters and returns a string.
+function arrayToString(arr) {
+    return arr.join("");
+}
+
+// Luke, I Am Your ... challenge: Luke Skywalker has family and friends.
+// Help him remind them who is who. Given a string with a name, return the
+// relation of that person to Luke.
+function relationToLuke(name) {
+    // if (name === "Darth Vader"){
+    //     return "Luke, I am your father."
+    // } else if (name === "Leia"){
+    //     return "Luke, I am your sister."
+    // } else if (name === "Han"){
+    //     return "Luke, I am your brother in law."
+    // } else return "Luke, I am your droid."
+    switch (name) {
+        case "Darth Vader":
+            return "Luke, I am your father."
+        case "Leia":
+            return "Luke, I am your sister."
+        case "Han":
+            return "Luke, I am your brother in law."
+        default:
+            return "Luke, I am your droid."
+    }
+}
+
+// Nth Star Number challenge: Crate a function that takes a positive integer
+// and returns the nth "star number".

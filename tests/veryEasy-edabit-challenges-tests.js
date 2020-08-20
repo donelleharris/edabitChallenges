@@ -163,3 +163,22 @@ describe('stringInt', function () {
         expect(stringInt("4")).toBe(4)
     });
 });
+
+describe('acceptIntoMovie', function () {
+    it('should be a defined function', function () {
+        expect(acceptIntoMovie()).toBeDefined();
+    });
+    it('should return a boolean value', function () {
+        expect(typeof acceptIntoMovie(15, true)).toBe("boolean")
+    });
+
+});
+//returns the opposite of the given boolean, as a number
+describe('flipBool', function () {
+    it('should be a defined function', function () {
+        expect(flipBool()).toBeDefined();
+    });
+    it('should return the opposite of the given boolean, as a number', function () {
+        expect(flipBool(false)).toBe(1)
+    });
+});
