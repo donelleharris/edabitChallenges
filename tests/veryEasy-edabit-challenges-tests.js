@@ -77,12 +77,12 @@ describe('howManySeconds', function (){
 
 describe('getFirstValue', function (){
     it('should be a defined function', function () {
-        expect(getFirstValue()).toBeDefined();
+        expect(getFirstValue([1, 2, 3])).toBeDefined();
     });
-    it('should return the first element in an array', function () {
+    it('should return 0 when passed arr=[1, 2, 3]', function () {
         expect(getFirstValue([1, 2, 3])).toBe(1);
     });
-    it('should return the first element in an array', function () {
+    it('should return 80 when passed arr=[80, 5, 100]', function () {
         expect(getFirstValue([80, 5, 100])).toBe(80);
     });
 
@@ -196,9 +196,86 @@ describe('kineticEnergy', function () {
         expect(kineticEnergy()).toBeDefined();
     });
     it('should return a whole number', function () {
-        expect(typeof kineticEnergy(m, v)).toBe("number")
+        expect(typeof kineticEnergy(60, 3)).toBe("number")
     });
     it('should return 270 when passed the values 60 & 3', function () {
         expect(kineticEnergy(60, 3)).toBe(270)
     });
 });
+
+// returns the number of individual stickers that are needed to cover a Rubic's cube
+describe('howManyStickers', function (){
+    it('should be a defined function', function () {
+        expect(howManyStickers()).toBeDefined();
+    });
+    it('should return a whole number', function () {
+        expect(typeof howManyStickers(1)).toBe("number");
+    });
+    it('should return a positive number', function () {
+        expect(howManyStickers(2)).toBeGreaterThan(0);
+    });
+});
+
+// return whether two arrays have the same values in the first and last indexes.
+describe('hasSameBread', function (){
+    it('should be a defined function', function () {
+        expect(hasSameBread(["white bread", "chicken", "white bread"], ["white bread", "chicken", "white bread"])).toBeDefined();
+    });
+    it('should return a boolean value', function () {
+        expect(hasSameBread(["white bread", "chicken", "white bread"], ["white bread", "chicken", "white bread"])).toBeTruthy();
+    });
+    it('should return true when passed the following arrays: ["white bread", "lettuce", "white bread"], ["white bread", "tomato", "white bread"]', function () {
+        expect(hasSameBread(["white bread", "lettuce", "white bread"], ["white bread", "tomato", "white bread"])).toBe(true);
+    });
+    it('should return false when passed the following arrays: ["brown bread", "chicken", "brown bread"], ["white bread", "chicken", "white bread"]', function () {
+        expect(hasSameBread(["brown bread", "chicken", "brown bread"], ["white bread", "chicken", "white bread"])).toBe(false);
+    });
+});
+
+// given a set number of passengers (n) return how many cars are needed to seat everyone comfortably.
+describe('carsNeeded', function () {
+    it('should be a defined function', function () {
+        expect(carsNeeded(15)).toBeDefined();
+    });
+    it('should return a number', function () {
+        expect(typeof carsNeeded(10)).toBe("number");
+    });
+    it('should return 1 when passed the value 4', function () {
+        expect(carsNeeded(4)).toBe(1);
+    });
+    it('should return 4 when passed the value 16', function () {
+        expect(carsNeeded(16)).toBe(4);
+    });
+});
+
+// given 3 parameters (total # of slices, number of recipients, & slices per person) determine if it is possible to split a pie fairly.
+describe('equalSlices', function () {
+    it('should be a defined function', function () {
+        expect(equalSlices(8, 3, 2)).toBeDefined();
+    });
+    it('should return a boolean value', function () {
+        expect(equalSlices(8, 3, 2)).toBeTruthy();
+    });
+    it('should return true when passed the values (8, 3, 2)', function () {
+        expect(equalSlices(8, 3, 2)).toBe(true);
+    });
+    it('should return false when passed the values (5, 6, 1)', function () {
+        expect(equalSlices(5, 6, 1)).toBe(false);
+    });
+});
+
+// function that takes in a word and determines whether or not it is plural. A plural word is one that ends in "s"
+describe('isPlural', function () {
+    it('should be a defined function', function () {
+        expect(isPlural("dudes")).toBeDefined();
+    });
+    it('should return a boolean value', function () {
+        expect(isPlural("dudes")).toBeTruthy();
+    });
+    it('should return true when passed the string "dudes"', function () {
+       expect(isPlural("dudes")).toBe(true);
+    });
+    it('should return false when passed the string "mood"', function () {
+        expect(isPlural("mood")).toBe(false);
+    });
+})
