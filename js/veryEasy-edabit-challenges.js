@@ -64,9 +64,12 @@ function stringInt(str) {
 }
 
 // Movie Theater Admittance challenge:
-function acceptIntoMovie(age, isSupervised) {
+function acceptIntoMovie(age, isSupervised){
     return (age >= 15) || isSupervised;
 }
+// function acceptIntoMovie(age, isSupervised) {
+//     return (age >= 15) || isSupervised;
+// }
 
 // Flip the Boolean challenge:
 function flipBool(b) {
@@ -103,7 +106,7 @@ function check(arr, el) {
     return arr.includes(el);
 }
 
-function concatinate(arr1, arr2 {
+function concatinate(arr1, arr2) {
     return  arr1.concat(arr2);
 }
 
@@ -154,3 +157,18 @@ function relationToLuke(name) {
 
 // Nth Star Number challenge: Crate a function that takes a positive integer
 // and returns the nth "star number".
+function starNumber(n) {
+    return (6 * n * (n - 1) + 1);
+}
+
+// Total Number of Parameters challenge: Create a function that returns
+// the total number of arguments passed in.
+function numberArgs(args) {
+    return arguments.length;
+}
+
+// Kinetic Energy challenge: Return the Kinetic Energy in Joules, given
+// the mass and velocity (round answers to nearest integer).
+function kineticEnergy(m, v){
+    return Math.round(0.5 * m * (Math.pow(v, 2)));
+}

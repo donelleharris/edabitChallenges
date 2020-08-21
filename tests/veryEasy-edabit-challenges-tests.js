@@ -1,11 +1,5 @@
-describe('hello', function (){
-    it('should be a defined function', function () {
-        expect(hello()).toBeDefined();
-    });
-    it('should return the string "hello edabit.com"', function () {
-        expect(hello()).toBe("hello edabit.com");
-    });
-});
+// Not all challenges have tests
+
 describe('addition', function (){
     it('should be a defined function', function () {
         expect(addition()).toBeDefined();
@@ -166,7 +160,7 @@ describe('stringInt', function () {
 
 describe('acceptIntoMovie', function () {
     it('should be a defined function', function () {
-        expect(acceptIntoMovie()).toBeDefined();
+        expect(typeof acceptIntoMovie()).toBeDefined();
     });
     it('should return a boolean value', function () {
         expect(typeof acceptIntoMovie(15, true)).toBe("boolean")
@@ -180,5 +174,31 @@ describe('flipBool', function () {
     });
     it('should return the opposite of the given boolean, as a number', function () {
         expect(flipBool(false)).toBe(1)
+    });
+});
+
+// returns the total number of arguments passed in
+describe('numberArgs', function () {
+    it('should be a defined function', function () {
+        expect(numberArgs()).toBeDefined();
+    });
+    it('should return a number', function () {
+        expect(typeof numberArgs()).toBe("number");
+    });
+    it('should return the number of arguments passed into the function (i.e. (a, b, c) should return "3"', function () {
+        expect(numberArgs("a", "b", "c")).toBe(3);
+    });
+});
+
+// returns Kinetic Energy in joules given mass and velocity
+describe('kineticEnergy', function () {
+    it('should be a defined function', function () {
+        expect(kineticEnergy()).toBeDefined();
+    });
+    it('should return a whole number', function () {
+        expect(typeof kineticEnergy(m, v)).toBe("number")
+    });
+    it('should return 270 when passed the values 60 & 3', function () {
+        expect(kineticEnergy(60, 3)).toBe(270)
     });
 });
