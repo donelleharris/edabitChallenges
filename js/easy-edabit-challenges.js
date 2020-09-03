@@ -32,3 +32,34 @@ function numArgs(){
 function countSyllables(){
     return str.length / 2;
 }
+
+// function that returns the number of matchsticks in a row of a given number
+// of matchstick houses
+function matchHouses(step) {
+    if(step === 0){
+        return 0
+    } else return 5 * step + 1;
+}
+
+// Create a function that takes an array of two numbers and checks if the square
+// root of the first number is equal to the cube root of the second number.
+function checkSquareAndCube(arr) {
+    return Math.sqrt(arr[0]) === Math.cbrt(arr[1])
+}
+
+//Create a function that takes a number as an argument. Add up all the numbers from
+// 1 to the number you passed to the function. For example, if the input is 4 then
+// your function should return 10 because 1 + 2 + 3 + 4 = 10.
+function addUp(num) {
+    var add = 0;
+    for (i = 0; i <= num; i++){
+        add += i;
+    }
+    return add
+}
+
+// Create a function that takes a string and returns the concatenated first and last character.
+function firstLast(name) {
+    return name.charAt(0) + name.charAt(name.length-1);
+}
+

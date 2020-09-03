@@ -71,3 +71,76 @@ describe('numArgs', function () {
         expect(numArgs("foo", "bar")).toBe(2);
     });
 });
+
+// function that returns the number of matchsticks in a row of a given number of matchstick houses
+describe('matchHouses', function () {
+    it('should be a defined function', function () {
+        expect(matchHouses(5)).toBeDefined();
+    });
+    it('should return a number', function () {
+        expect(typeof matchHouses(5)).toBe('number');
+    });
+    it('should return "6" when passed the value "1"', function () {
+        expect(matchHouses(1)).toBe(6)
+    });
+    it('should return "86" when passed the value "17"', function () {
+        expect(matchHouses(17)).toBe(86)
+    });
+    it('should return "496" when passed the value "99"', function () {
+        expect(matchHouses(99)).toBe(496)
+    });
+});
+
+// Create a function that takes an array of two numbers and checks if the square
+// root of the first number is equal to the cube root of the second number.
+describe('checkSquareAndCube', function (){
+    it('should be a defined function', function () {
+        expect(typeof checkSquareAndCube([4, 8])).toBeDefined();
+    });
+    it('should return a boolean value', function () {
+        expect(typeof checkSquareAndCube([4, 8])).toBe('boolean');
+    });
+    it('should return true when passed arr = [4, 8]', function () {
+        expect(checkSquareAndCube([4, 8])).toBe(true);
+    });
+    it('should return false when passed arr = [5, 10]', function () {
+        expect(checkSquareAndCube([5, 10])).toBe(false);;
+    });
+})
+
+//Create a function that takes a number as an argument. Add up all the numbers from 
+// 1 to the number you passed to the function. For example, if the input is 4 then 
+// your function should return 10 because 1 + 2 + 3 + 4 = 10.
+describe('addUp', function (){
+    it('should be a defined function', function () {
+        expect(addUp(5)).toBeDefined();
+    });
+    it('should return a number', function () {
+        expect(typeof addUp(5)).toBe('number');
+    });
+    it('should return 10 when passed the value 4', function () {
+        expect(addUp(4)).toBe(10);
+    });
+    it('should return 91 when passed the value 13', function () {
+        expect(addUp(13)).toBe(91);
+    });
+    it('should return 428275 when passed the value 925', function () {
+        expect(addUp(925)).toBe(428275);
+    });
+});
+
+// Create a function that takes a string and returns the concatenated first and last character.
+describe('firstLast', function (){
+    it('should be a defined function', function () {
+        expect(firstLast("adgesh")).toBeDefined();
+    });
+    it('should return a string', function () {
+        expect(typeof firstLast("adgesh")).toBe('string');
+    });
+    it('should return "gh" when passed the string "ganesh"', function () {
+        expect(firstLast("ganesh")).toBe("gh");
+    });
+    it('should return "ki" when passed the string "kali"', function () {
+        expect(firstLast("kali")).toBe('ki');
+    });
+})
